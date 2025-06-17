@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+html.dark {
+  --color-bg: 17 18 30;
+  --box-border: 24 24 246 / 0.1;
+  --box-text: transparent;
+  --heading-1: 245 245 246;
+  --heading-2: 245 245 246;
+  --heading-3: 213 213 219;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
