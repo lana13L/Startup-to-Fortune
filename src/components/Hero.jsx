@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col md:flex-row justify-between items-center animate-fade-in-delay-4 px-4 sm:px-6 lg:px-8 pt-21 pb-6 container mx-auto"
+      className="flex flex-col md:flex-row justify-between items-center animate-fade-in-delay-4 px-4 sm:px-6 lg:px-8 pt-21 pb-6 container mx-auto max-w-7xl"
     >
       {/* Left Column */}
       <div className="w-full md:w-3/5 space-y-2">

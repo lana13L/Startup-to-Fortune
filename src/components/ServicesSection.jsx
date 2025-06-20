@@ -33,8 +33,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="Services" className="md:py-15 py-10 container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
+    <section id="Services" className="md:py-15 py-10 container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-7 lg:gap-24">
         {/* Header */}
         <div className="md:w-1/3">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 md:w-4/5">
