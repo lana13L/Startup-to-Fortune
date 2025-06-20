@@ -77,7 +77,7 @@ const News = () => {
                 <button
                   type="submit"
                   className="w-full transition-all duration-200 
-           active:scale-90 hover:bg-violet-100 sm:w-auto cursor-pointer bg-white text-violet-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-l-none sm:rounded-r-xl transition-colors flex items-center justify-center sm:justify-start gap-2"
+           active:scale-95 hover:bg-violet-100 sm:w-auto cursor-pointer bg-white text-violet-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-l-none sm:rounded-r-xl transition-colors flex items-center justify-center sm:justify-start gap-2"
                 >
                   <span>Discover</span>
                   <HiArrowRight className="w-5 h-5" />

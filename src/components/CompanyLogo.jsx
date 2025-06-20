@@ -8,7 +8,7 @@ const CompanyLogo = () => {
 
   return (
     <div className="w-full bg-white py-10">
-      <div className="container mx-auto flex flex-col sm:flex-row sm:items-center items-start gap-8">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center items-start gap-8">
         <div className="w-[300px] shrink-0 text-gray-600 border-l-4 border-violet-500 bg-white py-2 z-10 sm:text-base text-xl font-semibold text-left px-8">
           Proud partner at <br /> Hubsport & Segment
         </div>
