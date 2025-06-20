@@ -1,16 +1,17 @@
+import { Aperture , CircleSlash2 } from 'lucide-react';
 const PurposeSection = () => {
     const features = [
       {
-        icon: "🟣",
-        title: "Built for impact",
+        icon: <Aperture  className='w-9 h-9 animate-splin text-violet-700'/>,
+        title: "Driven by Excellence",
         description:
-          "We identify and nurture a truly diverse team of designers, developers and marketers",
+          "We bring together passionate developers, designers, and strategists to create meaningful digital solutions",
       },
       {
-        icon: "🔴",
-        title: "In sync with you",
+        icon: <CircleSlash2 className='w-9 h-9 animate-splin text-violet-600' />,
+        title: "Aligned with Your Vision",
         description:
-          "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless.",
+          "We integrate with your goals, tools, and culture to deliver work that feels like a natural extension of your team",
       },
     ];
   
@@ -23,7 +24,7 @@ const PurposeSection = () => {
               ACHIEVE MORE
             </div>
             <h2 className="text-3xl md:w-4/5 md:text-4xl font-bold text-gray-800">
-              Purpose of a convoy is to keep your team
+              Great results are born from true collaboration.
             </h2>
           </div>
   

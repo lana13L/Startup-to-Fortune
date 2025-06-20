@@ -3,6 +3,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { useRef, useState } from 'react';
 
 const testimonials = [
   {
@@ -38,8 +39,23 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const swiperRef = useRef(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
+  const handleSwiper = (swiper) => {
+    swiperRef.current = swiper;
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+
+    swiper.on('slideChange', () => {
+      setIsBeginning(swiper.isBeginning);
+      setIsEnd(swiper.isEnd);
+    });
+  };
+
   return (
-    <section id="testimonials" className="md:py-16 py-6 px-4 max-w-7xl mx-auto">
+    <section id="testimonials" className="md:py-14 py-6 px-4 max-w-7xl mx-auto">
       <div className="text-center md:mb-12 mb-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           What our happy client say
@@ -52,30 +68,25 @@ const TestimonialsSection = () => {
       <div className="relative">
         <Swiper
           modules={[Navigation]}
-          spaceBetween={30}
+          spaceBetween={10}
+          onSwiper={handleSwiper}
           navigation={{
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
           }}
           breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
-          className="testimonials-swiper md:mb-12 "
+          className="testimonials-swiper md:mb-5"
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide
               key={testimonial.id}
               className="h-full md:py-12 py-4"
             >
-              <div className="text-center bg-white p-4 rounded-lg shadow-md h-full flex flex-col">
+              <div className="text-center cosmic-Shadow  mx-4 bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
                 <div className="flex justify-center mb-2 text-violet-600">
                   {[...Array(5)].map((_, i) => (
                     <span key={i}>★</span>
@@ -91,11 +102,19 @@ const TestimonialsSection = () => {
         </Swiper>
 
         {/* Custom Navigation Buttons */}
-        <div className="flex justify-center gap-4 md:mt-8 mt-4">
-          <button className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-violet-500 hover:text-white transition-colors">
+        <div className="flex justify-center gap-4 mt-4">
+          <button
+            className={`swiper-button-prev-custom cosmic-button transition-all duration-300 ${
+              isBeginning ? 'bg-violet-300 pointer-events-none' : 'opacity-100'
+            }`}
+          >
             <BsChevronLeft className="w-6 h-6" />
           </button>
-          <button className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-violet-500 hover:text-white transition-colors">
+          <button
+            className={`swiper-button-next-custom cosmic-button transition-all duration-300  ${
+              isEnd ? 'bg-violet-300 pointer-events-none' : 'opacity-100'
+            }`}
+          >
             <BsChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -105,3 +124,4 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+

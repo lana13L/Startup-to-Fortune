@@ -34,24 +34,23 @@ const PricingSection = () => {
           <div className="relative px-4">
             <div className="flex items-center gap-2">
               <span className="text-xs sm:text-sm text-gray-600">1</span>
-               <input 
+              <input 
   type="range"
   min="1"
   max="50"
   value={productCount}
   onChange={(e) => setProductCount(parseInt(e.target.value))}
-  className="slider flex-1 h-2 bg-violet-100 rounded-lg appearance-none cursor-pointer"
+  className="flex-1 h-3 bg-violet-100 rounded-lg appearance-none cursor-pointer rounded-slider"
 />
 
-              <span className="text-xs sm:text-sm text-gray-600">50</span>
+        <span className="text-xs sm:text-sm text-gray-600">50</span>
             </div>
           </div>
-
-          <div className="text-center mt-6">
+          <div className="text-center mt-9">
             <p className="text-xl text-gray-600 mb-4">
               Ready to get started?
             </p>
-            <button className="bg-violet-600 text-white px-6 py-3 rounded-lg hover:bg-violet-700 transition-colors cursor-pointer shadow-lg ">
+            <button className="cosmic-button mt-5">
               Get Started
             </button>
           </div>

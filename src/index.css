@@ -14,5 +14,92 @@ html.dark {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Space Grotesk", sans-serif;
+}
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+  --animate-splin: splin 3s linear infinite;
+}
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+
+    --primary: 250 47% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility cosmic-button {
+  @apply px-6 py-2 rounded-lg bg-violet-600 text-primary-foreground font-medium cursor-pointer
+         transition-all duration-300 hover:shadow-[10px_10px_10px_rgba(139,92,246,0.3)]
+          transition-all duration-200 
+           hover:-translate-y-1 active:scale-90;
+}
+@utility cosmic-Shadow {
+  @apply transition-shadow duration-500 hover:shadow-[10px_10px_10px_rgba(139,92,246,0.3)];
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+@keyframes splin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tailwind doesn't support pseudo-elements on input[type="range"] directly */
+.rounded-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #7c3aed; /* Violet-600 */
+  border-radius: 9999px; /* fully rounded */
+  cursor: pointer;
+  border: none;
+  margin-top: 1px; /* align thumb with track */
 }

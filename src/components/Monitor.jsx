@@ -7,18 +7,16 @@ const Monitor = () => {
             {/* left */}
              <div className='md:w-1/2 w-full'>
               <p className='text-violet-500 font-semibold'>SCHEDULE</p>
-              <h2 className='text-3xl md:text-4xl font-black text-neutral-900 md:mt-4 mt-2 mb-5'>Lorem ipsum dolor <br/>Lorem ipsum dolor sit</h2>
-              <p className='text-neutral-600 md:mb-10 mb-5'>Lorem Lorem ipsum dolor sit amet.ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur <br /><span className='text-violet-400'>Lorem ipsum dolor sit amet</span></p>
-                 <a href="#" className='bg-violet-600 shadow-xl  text-white px-4 md:px-6 py-3 rounded-xl hover:bg-violet-700 cursor-pointer transition-all hover:shadow-lg hover:shadow-blue-100 active:scale-95 '>Explore schedule features→</a>
+              <h2 className='text-4xl md:text-4xl font-black text-neutral-900 md:mt-4 mt-2 mb-5'>
+Stay ahead with effortless scheduling</h2>
+              <p className='text-neutral-700 md:mb-10 mb-5'>Managing your time has never been easier. Our intuitive scheduling tools help you organize tasks, meetings, and milestones with clarity and precision — all in one place.<br /><span className='text-violet-600 text-2xl'>Plan smarter, save time</span></p>
+                 <button href="#" className='cosmic-button active:scale-95 '>Explore schedule features →</button>
               </div>
              {/* right */}
     <div className='md:w-1/2 '>
-              <img src={state} alt="schedule" className='w-lg h-auto ' />
+              <img src={state} alt="schedule" className='w-lg h-auto hover:scale-[1.03] transition-all duration-300'/>
     </div>
-           
-           
           </div>
-           
         </section>
   )
 }

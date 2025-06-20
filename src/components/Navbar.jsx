@@ -15,11 +15,11 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xs z-50 border-b border-pink-100 shadow-sm">
-      <div className="flex justify-between items-center container mx-auto px-4 sm:px-6 lg:px-3 md:h-15 h-16">
+      <div className="flex opacity-0 animate-fade-in-delay-4 justify-between items-center container mx-auto px-4 sm:px-6 lg:px-3 md:h-15 h-16">
         {/* Logo */}
         <div className="flex items-center gap-1 cursor-pointer">
-          <div className="w-5 h-5 bg-gray-400 rounded-full opacity-75 hover:opacity-100 transition-opacity" />
-          <div className="w-5 h-5 bg-violet-600 rounded-full -ml-2 hover:opacity-75 transition-opacity" />
+          <div className="w-7 h-7 bg-gray-400 rounded-full opacity-75 hover:opacity-100 transition-opacity" />
+          <div className="w-7 h-7 bg-violet-600 rounded-full -ml-2 hover:opacity-75 transition-opacity" />
         </div>
 
         {/* Mobile Menu Button */}
@@ -49,7 +49,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <a
           href="#newsletter"
-          className="hidden md:block bg-violet-600 text-white px-6 py-2.5 rounded-lg hover:bg-violet-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-violet-100 shadow-lg"
+          className=" cosmic-button "
         >
           Get in touch
         </a>

@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-200  md:pt-8 mt-3">
+        <div className="border-t border-gray-200  md:pt-5 mt-3">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
               Copyright © {new Date().getFullYear()} codetutorbd.com

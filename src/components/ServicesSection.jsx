@@ -57,7 +57,7 @@ const ServicesSection = () => {
               <span className="text-gray-600">Development bring</span>
             </div>
           </div>
-          <button className="mt-8 bg-violet-600 text-white px-8 py-3 cursor-pointer rounded-full hover:bg-violet-700 transition-colors">
+          <button className="cosmic-button mt-8">
             Get started
           </button>
         </div>
@@ -67,7 +67,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 shadow-xl hover:bg-violet-100 transition-all duration-300"
+              className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 shadow-xl cosmic-Shadow hover:scale-[1.05] transition-all duration-300"
             >
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>

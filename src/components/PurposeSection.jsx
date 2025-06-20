@@ -1,13 +1,14 @@
+import { RefreshCcw , Command } from 'lucide-react'
 const PurposeSection = () => {
   const features = [
     {
-      icon: "🟣", // Replace with your actual icon component or image
+      icon: <Command className='w-9 h-9 animate-splin text-violet-700' />, // Replace with your actual icon component or image
       title: "Built for impact",
       description:
         "We identify and nurture a truly diverse team of designers, developers and marketers",
     },
     {
-      icon: "🔴", // Replace with your actual icon component or image
+      icon: <RefreshCcw className='w-9 h-9 animate-splin text-violet-700' /> , // Replace with your actual icon component or image
       title: "In sync with you",
       description:
         "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless.",
@@ -21,7 +22,7 @@ const PurposeSection = () => {
         <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start space-x-4">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg">
+                <div >
                   {feature.icon}
                 </div>
                 <div>
